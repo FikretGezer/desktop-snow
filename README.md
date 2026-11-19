@@ -3,6 +3,7 @@
 ![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D6?logo=windows)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![pygame-ce](https://img.shields.io/badge/pygame--ce-2.5-green)
+![License: MIT](https://img.shields.io/badge/license-MIT-yellow)
 
 > Cozy winter effects for your Windows desktop: snow that piles up on windows and the taskbar, a yeti, a snowplow, a gift train and wandering cats & dogs. *(Docs in Turkish.)*
 
@@ -92,3 +93,7 @@ Her şey panelden ayarlanır ve ayarlar `settings.json` dosyasına otomatik kayd
 - **"Python bulunamadı":** Python'u "Add to PATH" kutusunu işaretleyerek yeniden kur.
 - **Kar görünmüyor:** Panelde *Ekranlar* sekmesinde o ekranın açık olduğunu kontrol et. Kar arkada kalıyorsa "Kar uygulamaların önüne düşsün" anahtarını aç.
 - **Takılma oluyor:** *Genel → FPS* ayarını düşür ya da kar yoğunluğunu azalt. Karakterler ilk kez ekrana geldiğinde bir anlık takılma normaldir, o sırada çiziliyorlar.
+
+## Lisans
+
+[MIT](LICENSE) © FikretGezer
