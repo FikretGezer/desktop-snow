@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+settings.json
+*.lnk
+*.zip
+wallpapers/
+build/
+dist/
+*.spec
