@@ -1818,7 +1818,16 @@ class App:
             return user32.DefWindowProcW(hwnd, msg, wp, lp)
 
         self._tray_proc = WNDPROC(proc)
-        hinst = ctypes.windll.kernel32.GetModuleHandleW(None)
+        k32 = ctypes.windll.kernel32
+        k32.GetModuleHandleW.restype = wt.HMODULE          # 64-bit handle: the default int return truncates it
+        k32.GetModuleHandleW.argtypes = [wt.LPCWSTR]
+        hinst = k32.GetModuleHandleW(None)
+        user32.RegisterClassW.argtypes = [ctypes.POINTER(WNDCLASSW)]
+        user32.RegisterClassW.restype = wt.ATOM
+        user32.GetMessageW.argtypes = [ctypes.POINTER(wt.MSG), wt.HWND, wt.UINT, wt.UINT]
+        user32.TranslateMessage.argtypes = [ctypes.POINTER(wt.MSG)]
+        user32.DispatchMessageW.argtypes = [ctypes.POINTER(wt.MSG)]
+        user32.DispatchMessageW.restype = LRESULT
         wc = WNDCLASSW(lpfnWndProc=self._tray_proc, hInstance=hinst, lpszClassName="DesktopSnowTray")
         user32.RegisterClassW(ctypes.byref(wc))
         hwnd = user32.CreateWindowExW(0, "DesktopSnowTray", "Desktop Snow tray", 0, 0, 0, 0, 0, None, None, hinst, None)
@@ -1942,6 +1951,13 @@ def single_instance(wait):
 
 
 if __name__ == "__main__":
+    import faulthandler
+    import traceback
+    _log = open(os.path.join(HERE, "crash.log"), "a", encoding="utf8", buffering=1)
+    _log.write(f"\n--- start {datetime.datetime.now():%Y-%m-%d %H:%M:%S} argv={sys.argv[1:]}\n")
+    faulthandler.enable(_log, all_threads=True)
+    sys.stderr = _log
+    sys.excepthook = lambda *e: _log.write("".join(traceback.format_exception(*e)))
     _mutex = single_instance("--restart" in sys.argv)
     if _mutex is None:
         ctypes.windll.user32.MessageBoxW(None, "Desktop Snow zaten çalışıyor.\n\nPaneli açmak için sağ alttaki kar tanesi "

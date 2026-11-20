@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.0.1 - 2026-11-20
+Uygulamanın açılır açılmaz kapanması ve Windows ile birlikte başlamaması düzeltildi.
+
+### Fixed
+- Tepsi simgesi oluşturulurken 64-bit Windows'ta oluşan çökme giderildi. Uygulama artık açılıyor ve açık kalıyor, Windows açılışında da başlıyor.
+
+### Added
+- Beklenmedik bir çökmede nedeni `crash.log` dosyasına yazılıyor.
+
 ## v1.0.0 - 2026-11-20
 Desktop Snow'un ilk sürümü: Windows masaüstü için birikebilen kar, karakterler ve hayvanlar.
 

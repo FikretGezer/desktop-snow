@@ -7,3 +7,4 @@ wallpapers/
 build/
 dist/
 *.spec
+crash.log
