@@ -1,99 +1,99 @@
 # ❄ Desktop Snow
 
+**English** | [Türkçe](README.tr.md)
+
 ![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D6?logo=windows)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![pygame-ce](https://img.shields.io/badge/pygame--ce-2.5-green)
 ![License: MIT](https://img.shields.io/badge/license-MIT-yellow)
 
-> Cozy winter effects for your Windows desktop: snow that piles up on windows and the taskbar, a yeti, a snowplow, a gift train and wandering cats & dogs. *(Docs in Turkish.)*
+<p align="center"><img src="docs/panel.png" width="560" alt="Control panel"></p>
+<p align="center"><img src="docs/characters.png" width="760" alt="Characters"></p>
 
-<p align="center"><img src="docs/panel.png" width="560" alt="Kontrol paneli"></p>
-<p align="center"><img src="docs/characters.png" width="760" alt="Karakterler"></p>
+Winter effects for your Windows desktop. Snow and other weather fall onto your open windows and the taskbar, and pile up there. Characters and animals wander around the screen. Clicks go through to the windows underneath, so the effects never get in your way.
 
-Windows masaüstü için kış efektleri. Kar ve diğer yağışlar, açık pencerelerin ve görev çubuğunun üstüne düşer, orada birikir. Ekranda dolaşan karakterler ve hayvanlar vardır. Tıklamalar alttaki pencerelere gider, yani efektler hiçbir işini engellemez.
+## Install and run
 
-## Kurulum ve çalıştırma
+1. You need **Python 3**. Get it from [python.org](https://www.python.org), and tick **"Add to PATH"** during setup.
+2. Double-click **`Desktop Snow.bat`** in the folder.
+   - On first launch it installs the needed packages (`pygame-ce`, `pillow`) by itself. This needs an internet connection.
+   - It creates a **`Desktop Snow.lnk`** shortcut with a snowflake icon next to it. From then on you can start the app from this shortcut. You can copy it to the desktop or pin it to the taskbar.
+3. If you move the folder somewhere else, run the `.bat` once and the shortcut updates to the new location.
 
-1. Bilgisayarda **Python 3** yüklü olmalı. [python.org](https://www.python.org) adresinden indirebilirsin. Kurarken **"Add to PATH"** kutusunu işaretle.
-2. Klasördeki **`Desktop Snow.bat`** dosyasına çift tıkla.
-   - İlk açılışta gerekli paketleri (`pygame-ce`, `pillow`) kendisi kurar. Bunun için internet gerekir.
-   - Yanına kar tanesi simgeli bir **`Desktop Snow.lnk`** kısayolu oluşturur. Bundan sonra uygulamayı bu kısayoldan açabilirsin. Kısayolu masaüstüne kopyalayabilir ya da görev çubuğuna sabitleyebilirsin.
-3. Klasörü başka bir yere taşırsan bir kere `.bat` dosyasını çalıştır, kısayol yeni yere göre güncellenir.
+Only one copy of the app runs at a time. If you try to open it while it's already running, you get an "already running" message.
 
-Uygulama aynı anda sadece bir kez açılır. Zaten açıkken tekrar açmaya çalışırsan "zaten çalışıyor" uyarısı çıkar.
+## Packaging to move it
 
-## Taşımak için paketleme
+Double-click **`paketle.bat`**. It creates **`Desktop Snow.zip`** in the same folder, including your settings. Move the zip wherever you like, extract it and run `Desktop Snow.bat`.
 
-**`paketle.bat`** dosyasına çift tıkla. Aynı klasörde **`Desktop Snow.zip`** oluşur, içinde ayarların da vardır. Zip'i istediğin yere taşı, çıkart ve `Desktop Snow.bat` dosyasını çalıştır.
+## Shortcuts
 
-## Kısayollar
-
-| Tuş | İşlev |
+| Key | Action |
 |---|---|
-| `Ctrl+Alt+S` | Paneli aç / gizle |
-| `Ctrl+Alt+E` | Sıradaki efekte geç |
-| `Ctrl+Alt+Q` | Çıkış (ayarlar kaydedilir) |
+| `Ctrl+Alt+S` | Show / hide the panel |
+| `Ctrl+Alt+E` | Switch to the next effect |
+| `Ctrl+Alt+Q` | Quit (settings are saved) |
 
-Panel gizliyken sağ alttaki **kar tanesi simgesine** tıklayınca panel açılır. Simgeye sağ tıklayınca menü çıkar.
+While the panel is hidden, click the **snowflake icon** in the bottom-right tray to open it. Right-click the icon for a menu.
 
-## Özellikler
+## Features
 
-- **Efektler:** kar, yaprak, sakura, yağmur, ateş böceği, yıldız kayması
-- **Birikme:** Kar pencerelerin üstünde ve görev çubuğunda birikir.
-  - Pencereyi sallarsan üstündeki kar dökülür ve aşağıya düşer.
-  - Fareyle karı itebilirsin.
-- **Süsler:** Yılbaşı ağaçları ve kardan adamlar. Küçük çıkıp büyüyebilirler.
-- **Ziyaretçiler:**
-  - **Yeti:** Kardan adamları ve ağaçları ezer, kükrer.
-  - **Kar küreyici:** Görev çubuğundaki karı temizler.
-  - **Hediye treni:** Elfli bir tren gelir ve ağaç ya da kardan adam bırakır.
-- **Hayvanlar:**
-  - 9 köpek türü ve 8 kedi türü var.
-  - Dolaşırlar, otururlar, yatıp uyurlar, ekrana bakarlar, üşüyüp titrerler, zıplayıp oynarlar, arada ekrandan çıkıp giderler.
-  - Yürürken karı iter ve savururlar.
-- **Ekranlar:** Her ekran için efektin gösterilip gösterilmeyeceğini seçebilirsin. Ayrıca karın uygulamaların önüne mi düşeceğini, yoksa sadece masaüstünde mi görüneceğini ayrı ayrı ayarlayabilirsin.
-- **Kaos modu:** Ayarları belirli aralıklarla rastgele karıştırır.
-- **Windows ile açılma:** Panelde *Genel → "Windows ile birlikte açılsın"* anahtarı var.
+- **Effects:** snow, leaves, sakura, rain, fireflies, shooting stars
+- **Piling up:** Snow builds up on top of windows and on the taskbar.
+  - Shake a window and the snow on it falls off.
+  - You can push snow around with the mouse.
+- **Decorations:** Christmas trees and snowmen. They can pop up small and grow.
+- **Visitors:**
+  - **Yeti:** Stomps on snowmen and trees, and roars.
+  - **Snowplow:** Clears the snow off the taskbar.
+  - **Gift train:** A train with elves arrives and drops off a tree or a snowman.
+- **Animals:**
+  - 9 dog breeds and 8 cat breeds.
+  - They wander, sit, lie down and sleep, look at the screen, shiver in the cold, jump and play, and now and then walk off the screen.
+  - They push and kick up snow as they walk.
+- **Screens:** Choose per monitor whether the effect is shown. You can also set separately whether snow falls in front of apps or only on the desktop.
+- **Chaos mode:** Shuffles the settings randomly at set intervals.
+- **Start with Windows:** There's a switch under *General → "Start with Windows"* in the panel.
 
 ## Panel
 
-Her şey panelden ayarlanır ve ayarlar `settings.json` dosyasına otomatik kaydedilir.
+Everything is set from the panel, and settings are saved automatically to `settings.json`. The panel itself is in Turkish; this table gives the English meaning of each tab.
 
-| Sekme | Neler ayarlanır |
+| Tab | What you can change |
 |---|---|
-| ✨ Genel | Efekt seçimi ve canlı önizleme, duraklat, Windows ile açılma, hızlı işlemler, kaos modu, FPS |
-| ❄ Kar | Yoğunluk, tane boyu aralığı, hız, rüzgâr, birikme, sallayınca dökülme, fareyle itme, erime |
-| 🎄 Ağaç / ⛄ Kardan adam | Kendiliğinden çıkma, sıklık, en fazla sayı, boyut, büyüyerek çıkma, nerede çıkacağı |
-| 👣 Yeti | Sıklık, hız, boyut, neleri ezeceği, kar yemesi, kükreme, tepinme |
-| 🚜 Küreyici | Sıklık, gelmesi için gereken kar miktarı, hız, boyut, neleri ezeceği |
-| 🚂 Tren | Sıklık, hız, boyut, ne getireceği, durakta bekleme süresi |
-| 🐾 Hayvanlar | Köpek ve kedi sayısı, tür seçimi, boyut (hepsi / köpek / kedi), hız, her animasyonun açık-kapalı durumu ve sıklığı, karı dağıtma ve ne kadar dağıttıkları, kuyruk sallama, nefes buharı |
-| 🖥 Ekranlar | Her ekranda gösterme ve karın öne düşüp düşmeyeceği |
+| ✨ General | Effect choice with live preview, pause, start with Windows, quick actions, chaos mode, FPS |
+| ❄ Snow | Density, flake size range, speed, wind, piling, shaking off, pushing with the mouse, melting |
+| 🎄 Tree / ⛄ Snowman | Spawning on their own, frequency, maximum count, size, growing in, where they appear |
+| 👣 Yeti | Frequency, speed, size, what it stomps, eating snow, roaring, stomping |
+| 🚜 Snowplow | Frequency, how much snow it takes to show up, speed, size, what it runs over |
+| 🚂 Train | Frequency, speed, size, what it brings, how long it waits at the stop |
+| 🐾 Animals | Number of dogs and cats, breed choice, size (all / dogs / cats), speed, each animation on/off and how often, kicking up snow and how much, tail wagging, breath vapor |
+| 🖥 Screens | Show on each monitor, and whether snow falls in front of apps |
 
-## Dosyalar
+## Files
 
-| Dosya | Ne işe yarar |
+| File | Purpose |
 |---|---|
-| `Desktop Snow.bat` | Başlatıcı: paketleri kurar, kısayolu oluşturur, uygulamayı açar |
-| `paketle.bat` | Taşınabilir zip yapar |
-| `desktop_snow.py` | Ana uygulama: efektler, birikme, karakterler, tepsi simgesi |
-| `ui.py` | Animasyonlu kontrol paneli |
-| `pet_art.py` | Köpek ve kedi çizimleri |
-| `art_hd.py` | Yeti, küreyici, tren, kardan adam ve ağaç çizimleri |
-| `wallpaper.py` | Eski duvar kağıdı özelliği. Kapalı, sadece daha önce değiştirdiyse orijinal duvar kağıdını geri yükler |
-| `snow.ico` | Uygulama simgesi |
-| `settings.json` | Kaydedilen ayarlar. Silinirse varsayılan ayarlara döner |
+| `Desktop Snow.bat` | Launcher: installs packages, creates the shortcut, opens the app |
+| `paketle.bat` | Builds a portable zip |
+| `desktop_snow.py` | Main app: effects, piling, characters, tray icon |
+| `ui.py` | Animated control panel |
+| `pet_art.py` | Dog and cat drawings |
+| `art_hd.py` | Yeti, snowplow, train, snowman and tree drawings |
+| `wallpaper.py` | Old wallpaper feature. Disabled; it only restores your original wallpaper if it changed it before |
+| `snow.ico` | App icon |
+| `settings.json` | Saved settings. Delete it to go back to the defaults |
 
-## Hayvanlar
+## Animals
 
-<p align="center"><img src="docs/pets.png" width="420" alt="Köpek ve kedi türleri"></p>
+<p align="center"><img src="docs/pets.png" width="420" alt="Dog and cat breeds"></p>
 
-## Sorun giderme
+## Troubleshooting
 
-- **"Python bulunamadı":** Python'u "Add to PATH" kutusunu işaretleyerek yeniden kur.
-- **Kar görünmüyor:** Panelde *Ekranlar* sekmesinde o ekranın açık olduğunu kontrol et. Kar arkada kalıyorsa "Kar uygulamaların önüne düşsün" anahtarını aç.
-- **Takılma oluyor:** *Genel → FPS* ayarını düşür ya da kar yoğunluğunu azalt. Karakterler ilk kez ekrana geldiğinde bir anlık takılma normaldir, o sırada çiziliyorlar.
+- **"Python was not found":** Reinstall Python with the "Add to PATH" box ticked.
+- **No snow visible:** In the panel's *Screens* tab, check that the monitor is turned on. If snow stays behind your windows, turn on the "snow falls in front of apps" switch.
+- **Stuttering:** Lower *General → FPS* or reduce the snow density. A brief hitch the first time a character appears is normal; it's being drawn at that moment.
 
-## Lisans
+## License
 
 [MIT](LICENSE) © FikretGezer
